@@ -81,8 +81,32 @@ void delete_surplus(List* L)
 	while (p)
 	{
 		List *temp = p;
+		List* del=p->next;
+		while (del)
+		{
+			if (del->date = p->date)
+			{
+				temp->next = del->next;
+				free(del);
+				break;
+			}
+		}
+		p = p->next;
+	}
+	
+}
+//
+void reverse_lsit(List **L)
+{
+	List* p = (*L)->next;
+	List* cur = *L;
+	while (p->next)
+	{
+
 	}
 }
+
+
 //¥Ú”°¡¥±Ì
 void print_List(List* L)
 {
